@@ -5,17 +5,47 @@
 h1{
     text-align: center;
     font-family: Arial;
+    margin-bottom: 1em;
 }
 
 .container{
     align-items: center;
+    border: 2px solid rgb(204, 204, 204);
+    padding: 1em;
+    border-radius: 3px;
+    margin-left: 7em;
+    margin-right: 7em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 i{
     background-color:var(--primeColor);
     color: white;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 3px;
+}
+
+input{
+    border:none;
+    outline: none;/*لما نضغط عالبوكس ما بتظهر حدوده*/
+    padding: 5px;
+    font-size: 1.2em;
 }
 
 .addbar{
     margin-bottom: 1em;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+}
+
+button{
+    background-color: var(--primeColor);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    font-size: 1em;
+    padding: 8px;
 }
