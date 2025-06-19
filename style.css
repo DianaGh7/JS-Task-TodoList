@@ -1,5 +1,6 @@
 :root {
     --primeColor: rgb(3, 153, 190);
+    --secColor: rgb(233,67,67);
 }
 
 h1 {
@@ -68,8 +69,27 @@ h2 {
     gap: 10px;
     margin-left: 7em;
     margin-right: 7em;
+    margin-bottom: 5px;
     button {
         background-color: var(--primeColor);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 1em;
+        flex: 1;
+        padding: 8px;
+    }
+}
+
+.delete-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 7em;
+    margin-right: 7em;
+    button {
+        background-color: var(--secColor);
         color: white;
         border: none;
         border-radius: 3px;
