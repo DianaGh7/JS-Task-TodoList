@@ -31,7 +31,7 @@ input{
     border:none;
     outline: none;/*لما نضغط عالبوكس ما بتظهر حدوده*/
     padding: 5px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .addbar{
@@ -40,7 +40,7 @@ input{
     border-radius: 3px;
 }
 
-button{
+.container button{
     background-color: var(--primeColor);
     color: white;
     border: none;
@@ -48,4 +48,24 @@ button{
     width: 100%;
     font-size: 1em;
     padding: 8px;
+}
+
+h2{
+    text-align: center;
+    font-family: Arial;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.buttons {
+    display: flex;
+    flex: 3;
+    width: 100%;
+}
+
+.buttons button{
+    background-color: var(--primeColor);
+    color: white;
+    border: none;
+    border-radius: 3px;
 }
