@@ -1,0 +1,21 @@
+:root{
+    --primeColor: rgb(3,153,190);
+}
+
+h1{
+    text-align: center;
+    font-family: Arial;
+}
+
+.container{
+    align-items: center;
+}
+
+i{
+    background-color:var(--primeColor);
+    color: white;
+}
+
+.addbar{
+    margin-bottom: 1em;
+}
