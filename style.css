@@ -90,7 +90,7 @@ h2 {
     margin-left: 3em;
     margin-right: 4.55em;
     list-style-type: none;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-family: Arial;
     padding: 0.25em;
     padding-left: 1em;
@@ -119,6 +119,15 @@ h2 {
         padding-left: 0;
     }
 
+}
+
+.completed span{
+    text-decoration: line-through;
+    color:rgb(185,73,95);
+}
+
+.completed .check{
+    color: green !important;
 }
 
 .delete-buttons {
