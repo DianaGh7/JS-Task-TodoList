@@ -32,7 +32,7 @@ const hideError = () => {
 
 
 
-
+/*-------------Misk-------------------*/
 
 let todoList = document.getElementById("todo-list");
 
@@ -49,3 +49,16 @@ todoList.addEventListener("click", (e) => {
 
     listItem.classList.toggle("completed");
 })
+
+todoList.addEventListener("click", (e) => {
+    let editButton = e.target.closest(".edit");
+
+    if(!editButton) return;
+
+    let ch1 = document.getElementById("overlay");
+    let ch2 = document.getElementById("obacity");
+
+    ch1.classList.toggle("overlay");
+    ch2.classList.toggle("obacity")
+})
+
