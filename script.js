@@ -34,6 +34,12 @@ const text = taskinput.value.trim();
   return;
 }
 
+ if (text.length < 5) {
+    showError('Task must be at least 5 characters long')
+    return;
+  }
+
+
 
 })
 
