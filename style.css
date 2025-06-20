@@ -1,6 +1,6 @@
 :root {
     --primeColor: rgb(3, 153, 190);
-    --secColor: rgb(233,67,67);
+    --secColor: rgb(233, 67, 67);
 }
 
 h1 {
@@ -34,7 +34,7 @@ h1 {
     }
 }
 
-i {
+.addbar i {
     background-color: var(--primeColor);
     color: white;
     padding: 10px;
@@ -70,6 +70,7 @@ h2 {
     margin-left: 7em;
     margin-right: 7em;
     margin-bottom: 5px;
+
     button {
         background-color: var(--primeColor);
         color: white;
@@ -82,15 +83,42 @@ h2 {
     }
 }
 
-#todo-list li{
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
     border: 2px solid rgb(204, 204, 204);
     margin-left: 3em;
     margin-right: 4.55em;
     list-style-type: none;
     font-size: 1.5em;
     font-family: Arial;
-    padding: 0.2em;
+    padding: 0.25em;
+    padding-left: 1em;
     border-radius: 3px;
+
+    button {
+        margin: 0;
+        border: none;
+        background: none;
+        position: relative;
+        top: -2px;
+        font-size: 0.7em;
+    }
+
+    .check {
+        color: rgb(204, 204, 204);
+    }
+
+    .edit {
+        color: rgb(249,192,11);
+        padding-left: 0;
+    }
+
+    .delete {
+        color: rgb(229,69,74);
+        padding-left: 0;
+    }
+
 }
 
 .delete-buttons {
@@ -99,6 +127,7 @@ h2 {
     gap: 20px;
     margin-left: 7em;
     margin-right: 7em;
+
     button {
         background-color: var(--secColor);
         color: white;
