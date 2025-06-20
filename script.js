@@ -1,26 +1,35 @@
 ////////////////////////sara////////////////////////////
 
-const taskin=document.getElementById('todoInput');
-const errmsg = document.getElementById('errorMessage');
+const taskinput=document.getElementById('todoInput');
+const errorMessage = document.getElementById('errorMessage');
 const taskForm = document.getElementById('taskForm');
 
-taskForm.addEventListener('submit', (e) => {
-  e.preventDefault();})
-
-  const showError = (msg) => {
-  errorMessage.innerText = msg;
+ const showError = (msg) => {
+errorMessage.innerText = msg;
   errorMessage.style.display = 'block';
 };
 
 // when the user fix the error the error message should disappear
 const hideError = () => {
-  errorMessage.innerText = '';
+errorMessage.innerText = '';
   errorMessage.style.display = 'none';
 };
 
-const text = taskin.value.trim();
+taskForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+ 
 
 
+const text = taskinput.value.trim();
+
+
+ if (!text) {
+    showError('task connot be empty');
+    return;
+  }
+
+})
 
 
 
