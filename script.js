@@ -18,6 +18,8 @@ const hideError = () => {
   errorMessage.style.display = 'none';
 };
 
+const text = taskin.value.trim();
+
 
 
 
