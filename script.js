@@ -39,6 +39,7 @@ const text = taskinput.value.trim();
     return;
   }
 
+   hideError();
 
 
 })
