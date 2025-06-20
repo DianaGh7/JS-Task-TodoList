@@ -12,7 +12,7 @@ h1 {
 .container {
     align-items: center;
     border: 2px solid rgb(204, 204, 204);
-    padding: 1em;
+    padding: 1em 2em;
     border-radius: 3px;
     margin-left: 7em;
     margin-right: 7em;
@@ -43,16 +43,17 @@ h1 {
 }
 
 input {
-    border: none;
+    border :none;
     outline: none;
     /*لما نضغط عالبوكس ما بتظهر حدوده*/
     padding: 5px;
     font-size: 1.1em;
+    color:black
 }
 
 .addbar {
     margin-bottom: 1em;
-    border: 1px solid var(--primeColor);
+    border: 1px solid rgb(172, 168, 168);
     border-radius: 3px;
 }
 
@@ -147,5 +148,5 @@ h2 {
         flex: 1;
         padding: 8px;
     }
-    /*saraaaaaaaaaaaaaaaaaa*/
+
 }
