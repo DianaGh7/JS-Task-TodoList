@@ -52,15 +52,16 @@ h1 {
 }
 
 .addbar {
-    margin-bottom: 1em;
+    margin-bottom: 0.2em;
     border: 1px solid rgb(172, 168, 168);
     border-radius: 3px;
 }
 
 #errorMessage {
-    color: red;
+    color: rgb(180, 15, 15);
     font-size: 0.85em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 0em;
     display: none;
 }
 
