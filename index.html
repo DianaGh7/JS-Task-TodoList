@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>TodoInput</h1>
-    <div class="container" >
-        <div class="addbar">
-            <i class="fas fa-book"></i>
-            <input type="text" id="todo-input" placeholder=" New Todo" autocomplete="off"/>
-        </div>
-        <button> Add new task </button>
+    <div class="container">
+      <div class="addbar">
+        <i class="fas fa-book"></i>
+        <input
+          type="text"
+          id="todo-input"
+          placeholder=" New Todo"
+          autocomplete="off"
+        />
+      </div>
+      <button>Add new task</button>
     </div>
 
     <h2>Todo List</h2>
 
     <div class="buttons">
-        <button>All</button>
-        <button>Done</button>
-        <button>Todo</button>
+      <button>All</button>
+      <button>Done</button>
+      <button>Todo</button>
     </div>
 
     <ul id="todo-list">
-        <li>
-            1. JS
-        </li>
+      <li>
+        <span>Misk</span>
+        <div class="icons">
+          <button class="check">
+            <i class="fa-regular fa-square"></i>
+          </button>
+          <button class="edit">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </li>
     </ul>
 
     <div class="delete-buttons">
-        <button>Delete Done Tasks</button>
-        <button>Delete All Tasks</button>
+      <button>Delete Done Tasks</button>
+      <button>Delete All Tasks</button>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
