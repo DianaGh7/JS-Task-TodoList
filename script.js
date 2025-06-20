@@ -7,6 +7,10 @@ const taskForm = document.getElementById('taskForm');
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();})
 
+  const showError = (msg) => {
+  errorMessage.innerText = msg;
+  errorMessage.style.display = 'block';
+};
 
 
 
