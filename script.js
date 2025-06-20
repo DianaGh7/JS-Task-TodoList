@@ -12,6 +12,11 @@ taskForm.addEventListener('submit', (e) => {
   errorMessage.style.display = 'block';
 };
 
+// when the user fix the error the error message should disappear
+const hideError = () => {
+  errorMessage.innerText = '';
+  errorMessage.style.display = 'none';
+};
 
 
 
