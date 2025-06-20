@@ -1,3 +1,30 @@
+////////////////////////sara////////////////////////////
+
+const taskin=document.getElementById('todoInput');
+const errmsg = document.getElementById('errorMessage');
+const taskForm = document.getElementById('taskForm');
+
+taskForm.addEventListener('submit', (e) => {
+  e.preventDefault();})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let todoList = document.getElementById("todo-list");
 
 todoList.addEventListener("click", (e) => {
