@@ -59,6 +59,35 @@ todoList.addEventListener("click", (e) => {
     let ch2 = document.getElementById("obacity");
 
     ch1.classList.toggle("overlay");
-    ch2.classList.toggle("obacity")
+    ch2.classList.toggle("obacity");
 })
+
+
+let cancelButton = document.getElementById("cancel");
+
+cancelButton.addEventListener("click", (m) => {
+
+    let ch1 = document.getElementById("overlay");
+    let ch2 = document.getElementById("obacity");
+
+    ch1.classList.toggle("overlay");
+    ch2.classList.toggle("obacity");
+    
+})
+
+let saveButton = document.getElementById("save");
+
+saveButton.addEventListener("click", (m) => {
+
+    document.getElementById("inner-todo").innerText = document.getElementById("input-edition").value;
+    
+    let ch1 = document.getElementById("overlay");
+    let ch2 = document.getElementById("obacity");
+
+    ch1.classList.toggle("overlay");
+    ch2.classList.toggle("obacity");
+    
+})
+
+
 
