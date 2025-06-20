@@ -19,41 +19,43 @@
         <i class="fas fa-book"></i>
         <input type="text" id="todoInput" placeholder="New Todo" autocomplete="off" />
       </div>
-      <button>Add new task</button>
+      <div id="errorMessage" class="error-message"></div>
+      <button type="submit">Add new task</button>
     </div>
-    <!----------------- end sara---------->
+  </form>
+  <!----------------- end sara---------->
 
-    <h2>Todo List</h2>
+  <h2>Todo List</h2>
 
-    <div class="buttons">
-      <button>All</button>
-      <button>Done</button>
-      <button>Todo</button>
-    </div>
+  <div class="buttons">
+    <button>All</button>
+    <button>Done</button>
+    <button>Todo</button>
+  </div>
 
-    <ul id="todo-list">
-      <li>
-        <span>Misk</span>
-        <div class="icons">
-          <button class="check">
-            <i class="fa-regular fa-square"></i>
-          </button>
-          <button class="edit">
-            <i class="fa-solid fa-pen"></i>
-          </button>
-          <button class="delete">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-        </div>
-      </li>
-    </ul>
+  <ul id="todo-list">
+    <li>
+      <span>Misk</span>
+      <div class="icons">
+        <button class="check">
+          <i class="fa-regular fa-square"></i>
+        </button>
+        <button class="edit">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+        <button class="delete">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
 
-    <div class="delete-buttons">
-      <button>Delete Done Tasks</button>
-      <button>Delete All Tasks</button>
-    </div>
+  <div class="delete-buttons">
+    <button>Delete Done Tasks</button>
+    <button>Delete All Tasks</button>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 
