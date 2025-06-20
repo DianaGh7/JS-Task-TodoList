@@ -57,6 +57,13 @@ input {
     border-radius: 3px;
 }
 
+#errorMessage {
+  color: red;
+  font-size: 0.85em;
+  margin-bottom: 0.5em;
+  display: none;
+}
+
 h2 {
     text-align: center;
     font-family: Arial;
