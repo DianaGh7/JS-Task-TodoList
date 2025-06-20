@@ -12,7 +12,9 @@
     <div class="container" >
         <div class="addbar">
             <i class="fas fa-book"></i>
-            <input type="text" placeholder=" New Todo"/>
+            <form>
+                <input type="text" id="todo-input" placeholder=" New Todo" autocomplete="off"/>
+            </form>
         </div>
         <button> Add new task </button>
     </div>
@@ -24,6 +26,12 @@
         <button>Done</button>
         <button>Todo</button>
     </div>
+
+    <ul id="todo-list">
+        <li>
+            1. JS
+        </li>
+    </ul>
 
     <div class="delete-buttons">
         <button>Delete Done Tasks</button>

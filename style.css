@@ -82,6 +82,10 @@ h2 {
     }
 }
 
+#todo-list li{
+    border: 2px solid rgb(204, 204, 204);
+}
+
 .delete-buttons {
     display: flex;
     justify-content: space-between;
