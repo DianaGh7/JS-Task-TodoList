@@ -25,9 +25,15 @@ const text = taskinput.value.trim();
 
 
  if (!text) {
-    showError('task connot be empty');
+    showError('Task connot be empty');
     return;
   }
+
+  if (!isNaN(text[0])) {
+  showError('Task cannot start with a number');
+  return;
+}
+
 
 })
 
