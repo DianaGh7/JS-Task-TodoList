@@ -59,7 +59,7 @@ h1 {
 }
 
 .addbar:focus-within:has(input:not(:placeholder-shown)) {
-  border-color: black;
+    border-color: black;
 }
 
 #errorMessage {
@@ -99,6 +99,8 @@ h2 {
     }
 }
 
+/*-----------------------Misk-------------------------*/
+
 .todo-list li {
     display: flex;
     justify-content: space-between;
@@ -125,7 +127,7 @@ h2 {
         color: rgb(204, 204, 204);
     }
 
-    .check:hover{
+    .check:hover {
         filter: brightness(70%);
         cursor: pointer;
     }
@@ -135,7 +137,7 @@ h2 {
         padding-left: 0;
     }
 
-    .edit:hover{
+    .edit:hover {
         filter: brightness(70%);
         cursor: pointer;
     }
@@ -145,7 +147,7 @@ h2 {
         padding-left: 0;
     }
 
-    .delete:hover{
+    .delete:hover {
         filter: brightness(70%);
         cursor: pointer;
     }
@@ -245,7 +247,7 @@ h2 {
         padding: 8px;
     }
 
-    #edit-cancel:hover{
+    #edit-cancel:hover {
         border: 2px black solid;
         border-radius: 3px;
         text-align: center;
@@ -254,7 +256,7 @@ h2 {
         cursor: pointer;
     }
 
-    #save:hover{
+    #save:hover {
         border: 2px black solid;
         border-radius: 3px;
         text-align: center;
@@ -263,7 +265,6 @@ h2 {
         cursor: pointer;
     }
 }
-
 
 
 .delete-hidden {
@@ -293,7 +294,7 @@ h2 {
     transform: translate(-50%, -50%);
     border-radius: 10px;
 
-    p{
+    p {
         font-family: Arial;
         margin-bottom: 2em;
         margin-top: 0;
@@ -328,7 +329,7 @@ h2 {
         padding: 8px;
     }
 
-    #delete-cancel:hover{
+    #delete-cancel:hover {
         border: 2px black solid;
         border-radius: 3px;
         text-align: center;
@@ -337,7 +338,7 @@ h2 {
         cursor: pointer;
     }
 
-    #confirm:hover{
+    #confirm:hover {
         border: 2px black solid;
         border-radius: 3px;
         text-align: center;
@@ -346,3 +347,5 @@ h2 {
         cursor: pointer;
     }
 }
+
+/*----------------------------End Misk-----------------*/
