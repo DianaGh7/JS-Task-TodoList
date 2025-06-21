@@ -88,7 +88,7 @@ document.getElementById("edit-cancel").addEventListener("click", ()=>{
 });
 
 document.getElementById("save").addEventListener("click", ()=>{
-    document.getElementById("inner-todo"),innerText = document.getElementById("input-edition").value;
+    document.getElementById("inner-todo").innerText = document.getElementById("input-edition").value;
     toggleClass("edit-opacity","edit-opacity");
     toggleClass("edit-overlay","edit-overlay");
 });
