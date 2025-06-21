@@ -235,7 +235,7 @@ h2 {
         padding: 8px;
     }
 
-    .edition-buttons #cancel {
+    .edition-buttons #edit-cancel {
         background-color: var(--secColor);
         color: white;
         border: none;
@@ -245,7 +245,7 @@ h2 {
         padding: 8px;
     }
 
-    #cancel:hover{
+    #edit-cancel:hover{
         border: 2px black solid;
         border-radius: 3px;
         text-align: center;
