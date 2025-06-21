@@ -101,8 +101,17 @@ toDoList.addEventListener("click", (e) =>{
     toggleClass("delete-overlay","delete-overlay");
 });
 
+document.getElementById("confirm").addEventListener("click", ()=>{
+    document.getElementById("list-item").remove();
 
+    toggleClass("delete-opacity","delete-opacity");
+    toggleClass("delete-overlay","delete-overlay");
+});
 
+document.getElementById("delete-cancel").addEventListener("click", ()=>{
+    toggleClass("delete-opacity","delete-opacity");
+    toggleClass("delete-overlay","delete-overlay");
+});
 
 
 
