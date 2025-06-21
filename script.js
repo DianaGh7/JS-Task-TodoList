@@ -74,6 +74,16 @@ toDoList.addEventListener("click", (e) => {
     li.classList.toggle("comleted");
 });
 
+toDoList.addEventListener("click", (e) => {
+    let editButton = e.target.closest(".edit");
+    if(!editButton) return;
+
+    toggleClass("edit-opacity","edit-opacity");
+    toggleClass("edit-overlay","edit-overlay");
+});
+
+
+
 
 
 
