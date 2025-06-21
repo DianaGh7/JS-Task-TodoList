@@ -31,6 +31,7 @@ h1 {
 
     button:hover {
         background-color: rgb(0, 103, 129);
+        cursor: pointer;
     }
 }
 
@@ -52,7 +53,7 @@ h1 {
 }
 
 .addbar {
-    margin-bottom: 0.2em;
+    margin-bottom: 1em;
     border: 1px solid rgb(172, 168, 168);
     border-radius: 3px;
 }
@@ -63,10 +64,11 @@ h1 {
 
 #errorMessage {
     color: rgb(180, 15, 15);
-    font-size: 0.85em;
+    font-size: 0.9em;
     margin-bottom: 1em;
     margin-top: 0em;
     display: none;
+    font-family: Arial;
 }
 
 
@@ -97,7 +99,7 @@ h2 {
     }
 }
 
-#todo-list li {
+.todo-list li {
     display: flex;
     justify-content: space-between;
     border: 2px solid rgb(204, 204, 204);
@@ -123,14 +125,29 @@ h2 {
         color: rgb(204, 204, 204);
     }
 
+    .check:hover{
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
     .edit {
         color: rgb(249, 192, 11);
         padding-left: 0;
     }
 
+    .edit:hover{
+        filter: brightness(70%);
+        cursor: pointer;
+    }
+
     .delete {
         color: rgb(229, 69, 74);
         padding-left: 0;
+    }
+
+    .delete:hover{
+        filter: brightness(70%);
+        cursor: pointer;
     }
 
 }
@@ -164,11 +181,11 @@ h2 {
 
 }
 
-.hidden {
+.edit-hidden {
     display: none;
 }
 
-.obacity {
+.edit-opacity {
     position: fixed;
     top: 0;
     left: 0;
@@ -177,7 +194,7 @@ h2 {
     background: rgba(0, 0, 0, 0.6);
 }
 
-.overlay {
+.edit-overlay {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -215,7 +232,6 @@ h2 {
         border-radius: 3px;
         text-align: center;
         font-size: 1em;
-        flex: 1;
         padding: 8px;
     }
 
@@ -226,7 +242,24 @@ h2 {
         border-radius: 3px;
         text-align: center;
         font-size: 1em;
-        flex: 1;
         padding: 8px;
+    }
+
+    #cancel:hover{
+        border: 2px black solid;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 1em;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    #save:hover{
+        border: 2px black solid;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 1em;
+        padding: 8px;
+        cursor: pointer;
     }
 }
