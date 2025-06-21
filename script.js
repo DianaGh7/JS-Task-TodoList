@@ -82,6 +82,11 @@ toDoList.addEventListener("click", (e) => {
     toggleClass("edit-overlay","edit-overlay");
 });
 
+document.getElementById("edit-cancel").addEventListener("click", ()=>{
+    toggleClass("edit-opacity","edit-opacity");
+    toggleClass("edit-overlay","edit-overlay");
+});
+
 
 
 
