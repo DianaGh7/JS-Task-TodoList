@@ -74,6 +74,44 @@ toDoList.addEventListener("click", (e) => {
     li.classList.toggle("comleted");
 });
 
+toDoList.addEventListener("click", (e) => {
+    let editButton = e.target.closest(".edit");
+    if(!editButton) return;
+
+    toggleClass("edit-opacity","edit-opacity");
+    toggleClass("edit-overlay","edit-overlay");
+});
+
+document.getElementById("edit-cancel").addEventListener("click", ()=>{
+    toggleClass("edit-opacity","edit-opacity");
+    toggleClass("edit-overlay","edit-overlay");
+});
+
+document.getElementById("save").addEventListener("click", ()=>{
+    document.getElementById("inner-todo").innerText = document.getElementById("input-edition").value;
+    toggleClass("edit-opacity","edit-opacity");
+    toggleClass("edit-overlay","edit-overlay");
+});
+
+toDoList.addEventListener("click", (e) =>{
+    let deleteButton = e.target.closest(".delete");
+    if(!deleteButton) return;
+
+    toggleClass("delete-opacity","delete-opacity");
+    toggleClass("delete-overlay","delete-overlay");
+});
+
+document.getElementById("confirm").addEventListener("click", ()=>{
+    document.getElementById("list-item").remove();
+
+    toggleClass("delete-opacity","delete-opacity");
+    toggleClass("delete-overlay","delete-overlay");
+});
+
+document.getElementById("delete-cancel").addEventListener("click", ()=>{
+    toggleClass("delete-opacity","delete-opacity");
+    toggleClass("delete-overlay","delete-overlay");
+});
 
 
 
