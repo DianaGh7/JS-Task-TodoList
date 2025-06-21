@@ -93,6 +93,16 @@ document.getElementById("save").addEventListener("click", ()=>{
     toggleClass("edit-overlay","edit-overlay");
 });
 
+toDoList.addEventListener("click", (e) =>{
+    let deleteButton = e.target.closest(".delete");
+    if(!deleteButton) return;
+
+    toggleClass("delete-opacity","delete-opacity");
+    toggleClass("delete-overlay","delete-overlay");
+});
+
+
+
 
 
 
