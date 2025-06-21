@@ -58,7 +58,7 @@ const text = taskinput.value.trim();
 
 /*-------------Misk-------------------*/
 
-let todoList = document.getElementById("todo-list");
+let todoList = document.getElementsByClassName("todo-list")[0];
 
 todoList.addEventListener("click", (e) => {
     let checkButton = e.target.closest(".check");
@@ -79,25 +79,25 @@ todoList.addEventListener("click", (e) => {
 
     if(!editButton) return;
 
-    let ch1 = document.getElementById("overlay");
-    let ch2 = document.getElementById("obacity");
+    let ch1 = document.getElementById("edit-overlay");
+    let ch2 = document.getElementById("edit-opacity");
 
-    ch1.classList.toggle("overlay");
-    ch2.classList.toggle("obacity");
+    ch1.classList.toggle("edit-overlay");
+    ch2.classList.toggle("edit-opacity");
 })
 
 
-let cancelButton = document.getElementById("cancel");
+let cancelButton = document.getElementById("edit-cancel");
 
 cancelButton.addEventListener("click", (m) => {
 
-    let ch1 = document.getElementById("overlay");
-    let ch2 = document.getElementById("obacity");
+    let ch1 = document.getElementById("edit-overlay");
+    let ch2 = document.getElementById("edit-opacity");
 
-    ch1.classList.toggle("overlay");
-    ch2.classList.toggle("obacity");
+    ch1.classList.toggle("edit-overlay");
+    ch2.classList.toggle("edit-opacity");
     
-})
+});
 
 let saveButton = document.getElementById("save");
 
@@ -105,13 +105,15 @@ saveButton.addEventListener("click", (m) => {
 
     document.getElementById("inner-todo").innerText = document.getElementById("input-edition").value;
     
-    let ch1 = document.getElementById("overlay");
-    let ch2 = document.getElementById("obacity");
+    let ch1 = document.getElementById("edit-overlay");
+    let ch2 = document.getElementById("edit-opacity");
 
-    ch1.classList.toggle("overlay");
-    ch2.classList.toggle("obacity");
+    ch1.classList.toggle("edit-overlay");
+    ch2.classList.toggle("edit-opacity");
     
-})
+});
+
+
 
 
 
