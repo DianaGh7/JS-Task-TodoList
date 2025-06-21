@@ -63,7 +63,7 @@ let toDoList = document.querySelector(".todo-list");
 let toggleClass = (id,className) => document.getElementById(id).classList.toggle(className);
 
 toDoList.addEventListener("click", (e) => {
-    let checkButton = e.currentTarget.closest(".check");
+    let checkButton = e.target.closest(".check");
     if(!checkButton) return;
 
     let li = checkButton.closest("li");
@@ -71,7 +71,7 @@ toDoList.addEventListener("click", (e) => {
 
     icon.classList.toggle("fa-square");
     icon.classList.toggle("fa-check-square");
-    li.classList.toggle("comleted");
+    li.classList.toggle("completed");
 });
 
 toDoList.addEventListener("click", (e) => {
