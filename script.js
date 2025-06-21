@@ -40,9 +40,33 @@ taskForm.addEventListener('submit', (e) => {
     }
 
     hideError();
+   
+    const li = document.createElement('li');
+    li.innerHTML = `
+        <span class="inner-todo">${text}</span>
+        <div class="icons">
+            <button class="check">
+                <i class="fa-regular fa-square"></i>
+            </button>
+            <button class="edit">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="delete">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+    `;
+
+    toDoList.appendChild(li);
+
+    taskinput.value = '';
+
+});
+      
 
 
-})
+
+
 
 //////////////////////// end sara////////////////////////////
 
