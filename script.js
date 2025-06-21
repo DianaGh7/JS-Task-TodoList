@@ -1,45 +1,45 @@
 ////////////////////////sara////////////////////////////
 
-const taskinput=document.getElementById('todoInput');
+const taskinput = document.getElementById('todoInput');
 const errorMessage = document.getElementById('errorMessage');
 const taskForm = document.getElementById('taskForm');
 
- const showError = (msg) => {
-errorMessage.innerText = msg;
-  errorMessage.style.display = 'block';
+const showError = (msg) => {
+    errorMessage.innerText = msg;
+    errorMessage.style.display = 'block';
 };
 
 // when the user fix the error the error message should disappear
 const hideError = () => {
-errorMessage.innerText = '';
-  errorMessage.style.display = 'none';
+    errorMessage.innerText = '';
+    errorMessage.style.display = 'none';
 };
 
 taskForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
- 
+    e.preventDefault();
 
 
-const text = taskinput.value.trim();
 
 
- if (!text) {
-    showError('Task connot be empty');
-    return;
-  }
+    const text = taskinput.value.trim();
 
-  if (!isNaN(text[0])) {
-  showError('Task cannot start with a number');
-  return;
-}
 
- if (text.length < 5) {
-    showError('Task must be at least 5 characters long')
-    return;
-  }
+    if (!text) {
+        showError('Task connot be empty');
+        return;
+    }
 
-   hideError();
+    if (!isNaN(text[0])) {
+        showError('Task cannot start with a number');
+        return;
+    }
+
+    if (text.length < 5) {
+        showError('Task must be at least 5 characters long')
+        return;
+    }
+
+    hideError();
 
 
 })
@@ -60,11 +60,11 @@ const text = taskinput.value.trim();
 
 let toDoList = document.querySelector(".todo-list");
 
-let toggleClass = (id,className) => document.getElementById(id).classList.toggle(className);
+let toggleClass = (id, className) => document.getElementById(id).classList.toggle(className);
 
 toDoList.addEventListener("click", (e) => {
     let checkButton = e.target.closest(".check");
-    if(!checkButton) return;
+    if (!checkButton) return;
 
     let li = checkButton.closest("li");
     let icon = checkButton.querySelector("i");
@@ -76,43 +76,43 @@ toDoList.addEventListener("click", (e) => {
 
 toDoList.addEventListener("click", (e) => {
     let editButton = e.target.closest(".edit");
-    if(!editButton) return;
+    if (!editButton) return;
 
-    toggleClass("edit-opacity","edit-opacity");
-    toggleClass("edit-overlay","edit-overlay");
+    toggleClass("edit-opacity", "edit-opacity");
+    toggleClass("edit-overlay", "edit-overlay");
 });
 
-document.getElementById("edit-cancel").addEventListener("click", ()=>{
-    toggleClass("edit-opacity","edit-opacity");
-    toggleClass("edit-overlay","edit-overlay");
+document.getElementById("edit-cancel").addEventListener("click", () => {
+    toggleClass("edit-opacity", "edit-opacity");
+    toggleClass("edit-overlay", "edit-overlay");
 });
 
-document.getElementById("save").addEventListener("click", ()=>{
+document.getElementById("save").addEventListener("click", () => {
     document.getElementById("inner-todo").innerText = document.getElementById("input-edition").value;
-    toggleClass("edit-opacity","edit-opacity");
-    toggleClass("edit-overlay","edit-overlay");
+    toggleClass("edit-opacity", "edit-opacity");
+    toggleClass("edit-overlay", "edit-overlay");
 });
 
-toDoList.addEventListener("click", (e) =>{
+toDoList.addEventListener("click", (e) => {
     let deleteButton = e.target.closest(".delete");
-    if(!deleteButton) return;
+    if (!deleteButton) return;
 
-    toggleClass("delete-opacity","delete-opacity");
-    toggleClass("delete-overlay","delete-overlay");
+    toggleClass("delete-opacity", "delete-opacity");
+    toggleClass("delete-overlay", "delete-overlay");
 });
 
-document.getElementById("confirm").addEventListener("click", ()=>{
+document.getElementById("confirm").addEventListener("click", () => {
     document.getElementById("list-item").remove();
 
-    toggleClass("delete-opacity","delete-opacity");
-    toggleClass("delete-overlay","delete-overlay");
+    toggleClass("delete-opacity", "delete-opacity");
+    toggleClass("delete-overlay", "delete-overlay");
 });
 
-document.getElementById("delete-cancel").addEventListener("click", ()=>{
-    toggleClass("delete-opacity","delete-opacity");
-    toggleClass("delete-overlay","delete-overlay");
+document.getElementById("delete-cancel").addEventListener("click", () => {
+    toggleClass("delete-opacity", "delete-opacity");
+    toggleClass("delete-overlay", "delete-overlay");
 });
 
-
+/*------------------End Misk----------------------*/
 
 
