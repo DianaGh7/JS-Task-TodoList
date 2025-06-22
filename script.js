@@ -74,10 +74,6 @@ taskForm.addEventListener('submit', (e) => {
 
 });
       
-
-
-
-
 /*-----------------end sarah-------------------*/
 
 
