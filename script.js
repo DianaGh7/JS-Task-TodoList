@@ -76,9 +76,7 @@ taskForm.addEventListener('submit', (e) => {
       
 /*-----------------end sarah-------------------*/
 
-
-
-/*-------------Misk-------------------*/
+/*---------------------Misk-------------------*/
 
 let toDoList = document.querySelector(".todo-list");
 
