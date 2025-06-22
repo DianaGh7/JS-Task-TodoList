@@ -4,8 +4,6 @@
 }
 
 
-/*-----------------------sarah-------------------------*/
-
 h1 {
     text-align: center;
     font-family: Arial;
@@ -74,7 +72,6 @@ h1 {
     display: none;
     font-family: Arial;
 }
-
 
 h2 {
     text-align: center;
@@ -280,7 +277,6 @@ button.active-button {
         cursor: pointer;
     }
 }
-
 
 .delete-hidden {
     display: none;
