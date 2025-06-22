@@ -218,9 +218,14 @@ const saveTasks = () => {
     if (text){
       tasks.push({id, text, completed});
     }
-    
+
   });
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
 };
+
+
+const loadTasks = () => {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+}
