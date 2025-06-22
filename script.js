@@ -215,7 +215,10 @@ const saveTasks = () => {
     let completed = item.classList.contains('completed');
     let id = item.id;
 
-    tasks.push({id, text, completed});
+    if (text){
+      tasks.push({id, text, completed});
+    }
+    
   });
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
