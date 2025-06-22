@@ -210,7 +210,6 @@ const saveTasks = () => {
     tasks.push(item.textContent.trim());
   });
 
-  
-
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 
 };
