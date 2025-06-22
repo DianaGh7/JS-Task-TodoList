@@ -200,14 +200,14 @@ const showAll = () => {
 
 const showDone = () => {
   document.querySelector(".todo-list li").forEach(item => { 
-    item.style.display = block;
+    item.style.display = item.classList.contains("completed");
   })
 
 };
 
 const showTodo = () => {
   document.querySelector(".todo-list li").forEach(item => { 
-    item.style.display = block;
+    item.style.display = item.classList.contains("completed");
   })
 
 };
