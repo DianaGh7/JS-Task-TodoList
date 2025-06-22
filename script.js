@@ -69,7 +69,7 @@ taskForm.addEventListener('submit', (e) => {
     li.style.display="flex";
 
     toDoList.appendChild(li);
-
+    saveTasks();
     taskinput.value = '';
 
 });
@@ -107,6 +107,7 @@ toDoList.addEventListener("click", (e) => {
     icon.classList.toggle("fa-square");
     icon.classList.toggle("fa-check-square");
     li.classList.toggle("completed");
+    saveTasks();
 
     return;
     }
@@ -151,6 +152,7 @@ document.getElementById("save").addEventListener("click", () => {
 
   if (target) {
     target.querySelector(".inner-todo").innerText = document.getElementById("input-edition").value;
+    saveTasks();
   }
 
 
@@ -175,6 +177,7 @@ document.getElementById("confirm").addEventListener("click", () => {
   let target = document.getElementById(id);
 
   if (target) target.remove();
+  saveTasks();
 
   toggleClass("delete-opacity", "delete-opacity");
   toggleClass("delete-overlay", "delete-overlay");
