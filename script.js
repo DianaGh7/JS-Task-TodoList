@@ -193,21 +193,21 @@ const selectButton = (id)=>{
 
 const showAll = () => {
   document.querySelectorAll(".todo-list li").forEach(item => { 
-    item.style.display = block;
+    item.style.display = "flex";
   });
 
 };
 
 const showDone = () => {
   document.uerySelectorAll(".todo-list li").forEach(item => { 
-    item.style.display = item.classList.contains("completed") ? "block" : "none";
+    item.style.display = item.classList.contains("completed") ? "flex" : "none";
   });
 
 };
 
 const showTodo = () => {
   document.uerySelectorAll(".todo-list li").forEach(item => { 
-    item.style.display = item.classList.contains("completed") ? "none" : "block";
+    item.style.display = item.classList.contains("completed") ? "none" : "flex";
   });
 
 };
