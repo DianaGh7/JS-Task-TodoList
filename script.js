@@ -189,6 +189,17 @@ const selectButton = (id)=>{
 
   document.getElementById(id).classList.add("active-button");
 };
+
+
+const showAll = () => {
+  document.querySelector(".todo-list li").forEach(item => { 
+    item.style.display = block;
+  })
+
+};
+
+
+
  //لما أضغط عالبوتن يستدعي selectButton
 document.getElementById("all").addEventListener("click", ()=>{
     selectButton("all");
