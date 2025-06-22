@@ -209,8 +209,13 @@ document.getElementById("todo").addEventListener("click", ()=>{
 const saveTasks = () => {
 
   let tasks = [];
-  taskList.querySelectorAll('.todo-list li').forEach(item => {
-    tasks.push(item.textContent.trim());
+
+  document.querySelectorAll('.todo-list li').forEach(item => {
+    let text = item.querySelector('.inner-todo').innerText.trim();
+    let completed = item.classList.contains('completed');
+    let id = item.id;
+
+    tasks.push({id, text, completed});
   });
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
