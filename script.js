@@ -30,14 +30,14 @@ const errorMessage = document.getElementById('errorMessage');
 const taskForm = document.getElementById('taskForm');
 
 const showError = (msg) => {
-    errorMessage.innerText = msg;
-    errorMessage.style.display = 'block';
+  errorMessage.innerText = msg;
+  errorMessage.style.display = 'block';
 };
 
 // when the user fix the error the error message should disappear
 const hideError = () => {
-    errorMessage.innerText = '';
-    errorMessage.style.display = 'none';
+  errorMessage.innerText = '';
+  errorMessage.style.display = 'none';
 };
 
 taskForm.addEventListener('submit', (e) => {
@@ -46,12 +46,12 @@ taskForm.addEventListener('submit', (e) => {
 
   if (!validateInput(text, errorMessage)) return;
 
-    hideError();
-   
-    let todoCounter = 0;
-    const li = document.createElement('li');
-    li.id = `todo-${todoCounter++}`;
-    li.innerHTML = `
+  hideError();
+
+  let todoCounter = 0;
+  const li = document.createElement('li');
+  li.id = `todo-${todoCounter++}`;
+  li.innerHTML = `
         <span class="inner-todo">${text}</span>
         <div class="icons">
             <button class="check">
@@ -66,14 +66,14 @@ taskForm.addEventListener('submit', (e) => {
         </div>
     `;
 
-    li.style.display="flex";
+  li.style.display = "flex";
 
-    toDoList.appendChild(li);
-    saveTasks();
-    taskinput.value = '';
+  toDoList.appendChild(li);
+  saveTasks();
+  taskinput.value = '';
 
 });
-      
+
 /*-----------------end sarah-------------------*/
 
 /*---------------------Misk-------------------*/
@@ -83,8 +83,8 @@ let toDoList = document.querySelector(".todo-list");
 let toggleClass = (id, className) => document.getElementById(id).classList.toggle(className);
 
 toDoList.addEventListener("click", (e) => {
-    let checkButton = e.target.closest(".check");
-    if (checkButton){
+  let checkButton = e.target.closest(".check");
+  if (checkButton) {
 
     let li = checkButton.closest("li");
     let icon = checkButton.querySelector("i");
@@ -95,10 +95,10 @@ toDoList.addEventListener("click", (e) => {
     saveTasks();
 
     return;
-    }
+  }
 
-    let editButton = e.target.closest(".edit");
-    if (editButton){
+  let editButton = e.target.closest(".edit");
+  if (editButton) {
 
     let li = editButton.closest("li");
     let todoText = li.querySelector(".inner-todo");
@@ -110,18 +110,18 @@ toDoList.addEventListener("click", (e) => {
     toggleClass("edit-overlay", "edit-overlay");
 
     return;
-    }
+  }
 
-    let deleteButton = e.target.closest(".delete");
-    if (deleteButton){
-        let li = deleteButton.closest("li");
-        document.getElementById("confirm").dataset.targetId = li.id;
+  let deleteButton = e.target.closest(".delete");
+  if (deleteButton) {
+    let li = deleteButton.closest("li");
+    document.getElementById("confirm").dataset.targetId = li.id;
 
     toggleClass("delete-opacity", "delete-opacity");
     toggleClass("delete-overlay", "delete-overlay");
 
     return;
-    }
+  }
 });
 
 document.getElementById("save").addEventListener("click", () => {
@@ -169,24 +169,24 @@ document.getElementById("confirm").addEventListener("click", () => {
 });
 
 
-const selectButton = (id)=>{
-    document.querySelectorAll("#clssification-btns button").forEach((btn) => {
+const selectButton = (id) => {
+  document.querySelectorAll("#clssification-btns button").forEach((btn) => {
     btn.classList.remove("active-button");
   });
 
   document.getElementById(id).classList.add("active-button");
 };
 
-document.getElementById("all").addEventListener("click", ()=>{
-    selectButton("all");
+document.getElementById("all").addEventListener("click", () => {
+  selectButton("all");
 });
 
-document.getElementById("done").addEventListener("click", ()=>{
-    selectButton("done");
+document.getElementById("done").addEventListener("click", () => {
+  selectButton("done");
 });
 
-document.getElementById("todo").addEventListener("click", ()=>{
-    selectButton("todo");
+document.getElementById("todo").addEventListener("click", () => {
+  selectButton("todo");
 });
 /*------------------End Misk----------------------*/
 
@@ -200,8 +200,8 @@ const saveTasks = () => {
     let completed = item.classList.contains('completed');
     let id = item.id;
 
-    if (text){
-      tasks.push({id, text, completed});
+    if (text) {
+      tasks.push({ id, text, completed });
     }
 
   });
