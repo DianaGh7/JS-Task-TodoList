@@ -192,21 +192,21 @@ const selectButton = (id)=>{
 
 
 const showAll = () => {
-  document.querySelector(".todo-list li").forEach(item => { 
+  document.querySelectorAll(".todo-list li").forEach(item => { 
     item.style.display = block;
   })
 
 };
 
 const showDone = () => {
-  document.querySelector(".todo-list li").forEach(item => { 
+  document.uerySelectorAll(".todo-list li").forEach(item => { 
     item.style.display = item.classList.contains("completed");
   })
 
 };
 
 const showTodo = () => {
-  document.querySelector(".todo-list li").forEach(item => { 
+  document.uerySelectorAll(".todo-list li").forEach(item => { 
     item.style.display = item.classList.contains("completed");
   })
 
