@@ -41,7 +41,9 @@ taskForm.addEventListener('submit', (e) => {
 
     hideError();
    
+    let todoCounter = 0;
     const li = document.createElement('li');
+    li.id = `todo-${todoCounter++}`;
     li.innerHTML = `
         <span class="inner-todo">${text}</span>
         <div class="icons">
@@ -56,6 +58,8 @@ taskForm.addEventListener('submit', (e) => {
             </button>
         </div>
     `;
+
+    li.style.display="flex";
 
     toDoList.appendChild(li);
 
@@ -88,7 +92,7 @@ let toggleClass = (id, className) => document.getElementById(id).classList.toggl
 
 toDoList.addEventListener("click", (e) => {
     let checkButton = e.target.closest(".check");
-    if (!checkButton) return;
+    if (checkButton){
 
     let li = checkButton.closest("li");
     let icon = checkButton.querySelector("i");
@@ -96,47 +100,92 @@ toDoList.addEventListener("click", (e) => {
     icon.classList.toggle("fa-square");
     icon.classList.toggle("fa-check-square");
     li.classList.toggle("completed");
-});
 
-toDoList.addEventListener("click", (e) => {
+    return;
+    }
+
     let editButton = e.target.closest(".edit");
-    if (!editButton) return;
+    if (editButton){
+
+    let li = editButton.closest("li");
+    let todoText = li.querySelector(".inner-todo");
+    document.getElementById("input-edition").value = todoText.innerText;
+    document.getElementById("save").dataset.targetId = li.id;
+
 
     toggleClass("edit-opacity", "edit-opacity");
     toggleClass("edit-overlay", "edit-overlay");
-});
 
-document.getElementById("edit-cancel").addEventListener("click", () => {
-    toggleClass("edit-opacity", "edit-opacity");
-    toggleClass("edit-overlay", "edit-overlay");
+    return;
+    }
+
+    let deleteButton = e.target.closest(".delete");
+    if (deleteButton){
+        let li = deleteButton.closest("li");
+        document.getElementById("confirm").dataset.targetId = li.id;
+
+    toggleClass("delete-opacity", "delete-opacity");
+    toggleClass("delete-overlay", "delete-overlay");
+
+    return;
+    }
 });
 
 document.getElementById("save").addEventListener("click", () => {
-    document.getElementById("inner-todo").innerText = document.getElementById("input-edition").value;
-    toggleClass("edit-opacity", "edit-opacity");
-    toggleClass("edit-overlay", "edit-overlay");
+  let id = document.getElementById("save").dataset.targetId;
+  let target = document.getElementById(id);
+
+  if (target) {
+    target.querySelector(".inner-todo").innerText =
+      document.getElementById("input-edition").value;
+  }
+
+  toggleClass("edit-opacity", "edit-opacity");
+  toggleClass("edit-overlay", "edit-overlay");
 });
 
-toDoList.addEventListener("click", (e) => {
-    let deleteButton = e.target.closest(".delete");
-    if (!deleteButton) return;
 
-    toggleClass("delete-opacity", "delete-opacity");
-    toggleClass("delete-overlay", "delete-overlay");
-});
-
-document.getElementById("confirm").addEventListener("click", () => {
-    document.getElementById("list-item").remove();
-
-    toggleClass("delete-opacity", "delete-opacity");
-    toggleClass("delete-overlay", "delete-overlay");
+document.getElementById("edit-cancel").addEventListener("click", () => {
+  toggleClass("edit-opacity", "edit-opacity");
+  toggleClass("edit-overlay", "edit-overlay");
 });
 
 document.getElementById("delete-cancel").addEventListener("click", () => {
-    toggleClass("delete-opacity", "delete-opacity");
-    toggleClass("delete-overlay", "delete-overlay");
+  toggleClass("delete-opacity", "delete-opacity");
+  toggleClass("delete-overlay", "delete-overlay");
 });
 
+
+document.getElementById("confirm").addEventListener("click", () => {
+  let id = document.getElementById("confirm").dataset.targetId;
+  let target = document.getElementById(id);
+
+  if (target) target.remove();
+
+  toggleClass("delete-opacity", "delete-opacity");
+  toggleClass("delete-overlay", "delete-overlay");
+});
+
+
+const selectButton = (id)=>{
+    document.querySelectorAll("#clssification-btns button").forEach((btn) => {
+    btn.classList.remove("active-button");
+  });
+
+  document.getElementById(id).classList.add("active-button");
+};
+
+document.getElementById("all").addEventListener("click", ()=>{
+    selectButton("all");
+});
+
+document.getElementById("done").addEventListener("click", ()=>{
+    selectButton("done");
+});
+
+document.getElementById("todo").addEventListener("click", ()=>{
+    selectButton("todo");
+});
 /*------------------End Misk----------------------*/
 
 

@@ -27,7 +27,7 @@
           />
         </div>
         <div id="errorMessage" class="error-message"></div>
-        <button type="submit">Add new task</button>
+        <button type="submit">Add New Task</button>
       </div>
     </form>
     <!----------------- end sara---------->
@@ -35,15 +35,15 @@
     <!-----------------------Misk------------------->
     <h2>Todo List</h2>
 
-    <div class="buttons">
-      <button>All</button>
-      <button>Done</button>
-      <button>Todo</button>
+    <div class="buttons" id="clssification-btns">
+      <button id="all" onclick="displayAll()">All</button>
+      <button id="done" onclick="displayDone()">Done</button>
+      <button id="todo" onclick="displayTodo()">Todo</button>
     </div>
 
     <ul class="todo-list">
       <li id="list-item">
-        <span id="inner-todo">Misk</span>
+        <span id="inner-todo"></span>
         <div class="icons">
           <button class="check">
             <i class="fa-regular fa-square"></i>
