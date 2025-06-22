@@ -200,14 +200,14 @@ const showAll = () => {
 
 const showDone = () => {
   document.uerySelectorAll(".todo-list li").forEach(item => { 
-    item.style.display = item.classList.contains("completed");
+    item.style.display = item.classList.contains("completed") ? "block" : "none";
   });
 
 };
 
 const showTodo = () => {
   document.uerySelectorAll(".todo-list li").forEach(item => { 
-    item.style.display = item.classList.contains("completed");
+    item.style.display = item.classList.contains("completed") ? "none" : "block";
   });
 
 };
