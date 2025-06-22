@@ -63,7 +63,7 @@ h1 {
     border-color: black;
 }
 
-#errorMessage {
+.error-message {
     color: rgb(180, 15, 15);
     font-size: 0.9em;
     margin-bottom: 1em;
