@@ -3,6 +3,9 @@
     --secColor: rgb(233, 67, 67);
 }
 
+
+/*-----------------------sarah-------------------------*/
+
 h1 {
     text-align: center;
     font-family: Arial;
@@ -103,7 +106,6 @@ h2 {
     }
 }
 
-/*-----------------------Misk-------------------------*/
 
 button.active-button {
     background-color: rgb(3, 102, 129);
