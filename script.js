@@ -40,6 +40,7 @@ const hideError = () => {
   errorMessage.style.display = 'none';
 };
 
+
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = taskinput.value.trim();
@@ -73,6 +74,7 @@ taskForm.addEventListener('submit', (e) => {
   taskinput.value = '';
 
 });
+
 
 /*-----------------end sarah-------------------*/
 
@@ -177,6 +179,7 @@ const selectButton = (id) => {
   document.getElementById(id).classList.add("active-button");
 };
 
+
 document.getElementById("all").addEventListener("click", () => {
   selectButton("all");
 });
@@ -210,7 +213,11 @@ const saveTasks = () => {
 
 };
 
-
+/*
 const loadTasks = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-}
+
+  tasks.forEach(createTaskElement);
+}*/
+
+
