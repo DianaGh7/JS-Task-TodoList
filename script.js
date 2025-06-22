@@ -201,3 +201,16 @@ document.getElementById("todo").addEventListener("click", ()=>{
     selectButton("todo");
 });
 /*------------------End Misk----------------------*/
+
+/*------------------Diana----------------------*/
+const saveTasks = () => {
+
+  let tasks = [];
+  taskList.querySelectorAll('.todo-list li').forEach(item => {
+    tasks.push(item.textContent.trim());
+  });
+
+  
+
+
+};
