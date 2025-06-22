@@ -198,6 +198,19 @@ const showAll = () => {
 
 };
 
+const showDone = () => {
+  document.querySelector(".todo-list li").forEach(item => { 
+    item.style.display = block;
+  })
+
+};
+
+const showTodo = () => {
+  document.querySelector(".todo-list li").forEach(item => { 
+    item.style.display = block;
+  })
+
+};
 
 
  //لما أضغط عالبوتن يستدعي selectButton
