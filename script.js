@@ -181,10 +181,24 @@ document.getElementById("delete-cancel").addEventListener("click", () => {
 
 
 document.getElementById("confirm").addEventListener("click", () => {
+  if (deleteMode === 'single') {
   let id = document.getElementById("confirm").dataset.targetId;
   let target = document.getElementById(id);
 
   if (target) target.remove();
+  }
+
+  if (deleteMode === 'done') {
+    document.querySelectorAll(".todo-list li.completed").forEach(task => task.remove());
+  }
+
+  if (deleteMode === 'all') {
+    document.querySelectorAll(".todo-list li").forEach(task => task.remove());
+  }
+
+  // To Reset t single mode
+  deleteMode = 'single';
+  document.getElementById("confirm").removeAttribute("data-target-id");
   saveTasks();
 
   toggleClass("delete-opacity", "delete-opacity");
