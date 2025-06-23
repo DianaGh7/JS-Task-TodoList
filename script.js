@@ -135,6 +135,10 @@ toDoList.addEventListener("click", (e) => {
     if (deleteButton){
         let li = deleteButton.closest("li");
         document.getElementById("confirm").dataset.targetId = li.id;
+        
+        deleteMode = 'single';
+        deleteTitle.innerText = "Delete Task";
+        deleteMessage.innerText = "Are you sure you want to delete this task?";
 
     toggleClass("delete-opacity", "delete-opacity");
     toggleClass("delete-overlay", "delete-overlay");
