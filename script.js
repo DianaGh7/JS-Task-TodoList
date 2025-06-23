@@ -335,7 +335,10 @@ const disableDeleteButtons = () => {
   deleteDoneBtn.disabled = doneTasks.length === 0;
 };
 
-
+// Call the disable buttons fun from the loading of the page
+window.addEventListener("DOMContentLoaded", () => {
+  disableDeleteButtons();
+});
 
 
 /*--------------------------------End-Diana----------------------------------------*/
