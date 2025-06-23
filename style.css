@@ -1,8 +1,8 @@
+
 :root {
     --primeColor: rgb(3, 153, 190);
     --secColor: rgb(233, 67, 67);
 }
-
 
 h1 {
     text-align: center;
@@ -13,19 +13,19 @@ h1 {
 .container {
     align-items: center;
     border: 2px solid rgb(204, 204, 204);
+    padding: 1em 2em;
     border-radius: 3px;
     margin-left: 7em;
     margin-right: 7em;
     padding-left: 2em;
     padding-right: 2em;
-    padding: 1em 2em;
 
     button {
         background-color: var(--primeColor);
         color: white;
-        width: 100%;
         border: none;
         border-radius: 1px;
+        width: 100%;
         font-size: 1em;
         padding: 8px;
     }
@@ -65,13 +65,14 @@ h1 {
 }
 
 .error-message {
-    color: #b40f0f;
-       font-family: Arial;
+    color: rgb(180, 15, 15);
     font-size: 0.9em;
     margin-bottom: 1em;
     margin-top: 0em;
     display: none;
+    font-family: Arial;
 }
+
 
 h2 {
     text-align: center;
@@ -98,12 +99,12 @@ h2 {
         flex: 1;
         padding: 8px;
     }
-
-    button:hover {
+    button:hover{
         cursor: pointer;
     }
 }
 
+/*-----------------------Misk-------------------------*/
 
 button.active-button {
     background-color: rgb(3, 102, 129);
@@ -115,7 +116,6 @@ button.active-button {
     display: none;
     justify-content: space-between;
     border: 2px solid rgb(204, 204, 204);
-    margin-bottom: 13px;
     margin-left: 3em;
     margin-right: 5em;
     list-style-type: none;
@@ -124,7 +124,7 @@ button.active-button {
     padding: 0.25em;
     padding-left: 1em;
     border-radius: 3px;
-
+    margin-bottom: 13px;
 
     button {
         margin: 0;
@@ -191,6 +191,10 @@ button.active-button {
         font-size: 1em;
         flex: 1;
         padding: 8px;
+    }
+
+    button:hover{
+        cursor: pointer;
     }
 
 }
@@ -278,6 +282,7 @@ button.active-button {
     }
 }
 
+
 .delete-hidden {
     display: none;
 }
@@ -360,3 +365,14 @@ button.active-button {
 }
 
 /*----------------------------End Misk-----------------*/
+
+button:disabled {
+    background-color: rgb(244, 141, 144) !important;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+    .edit-opacity,
+    .delete-opacity {
+    z-index: 1000;
+    }
