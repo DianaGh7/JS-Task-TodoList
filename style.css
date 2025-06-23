@@ -13,19 +13,19 @@ h1 {
 .container {
     align-items: center;
     border: 2px solid rgb(204, 204, 204);
-    padding: 1em 2em;
     border-radius: 3px;
     margin-left: 7em;
     margin-right: 7em;
     padding-left: 2em;
     padding-right: 2em;
+    padding: 1em 2em;
 
     button {
         background-color: var(--primeColor);
         color: white;
+        width: 100%;
         border: none;
         border-radius: 1px;
-        width: 100%;
         font-size: 1em;
         padding: 8px;
     }
@@ -66,11 +66,11 @@ h1 {
 
 .error-message {
     color: #b40f0f;
+       font-family: Arial;
     font-size: 0.9em;
     margin-bottom: 1em;
     margin-top: 0em;
     display: none;
-    font-family: Arial;
 }
 
 h2 {
