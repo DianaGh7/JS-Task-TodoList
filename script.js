@@ -28,6 +28,11 @@ const validateInput = (text, errorContainer) => {
 const taskinput = document.getElementById('todoInput');
 const errorMessage = document.getElementById('errorMessage');
 const taskForm = document.getElementById('taskForm');
+const deleteTitle = document.getElementById("delete-title");
+const deleteMessage = document.getElementById("delete-message");
+const confirmButton = document.getElementById("confirm");
+let deleteMode = 'single'; 
+
 
 const showError = (msg) => {
     errorMessage.innerText = msg;
@@ -126,6 +131,7 @@ toDoList.addEventListener("click", (e) => {
     }
 
     let deleteButton = e.target.closest(".delete");
+    
     if (deleteButton){
         let li = deleteButton.closest("li");
         document.getElementById("confirm").dataset.targetId = li.id;
@@ -134,7 +140,7 @@ toDoList.addEventListener("click", (e) => {
     toggleClass("delete-overlay", "delete-overlay");
 
     return;
-    }
+  }
 });
 
 document.getElementById("save").addEventListener("click", () => {
@@ -182,6 +188,10 @@ document.getElementById("confirm").addEventListener("click", () => {
 });
 
 
+
+
+/*--------------------------------Diana----------------------------------------*/
+
 const selectButton = (id)=>{
     document.querySelectorAll("#clssification-btns button").forEach((btn) => {
     btn.classList.remove("active-button");
@@ -213,6 +223,8 @@ const displayTodo = () => {
 };
 
 
+
+
  //لما أضغط عالبوتن يستدعي selectButton
 document.getElementById("all").addEventListener("click", ()=>{
     selectButton("all");
@@ -225,9 +237,29 @@ document.getElementById("done").addEventListener("click", ()=>{
 document.getElementById("todo").addEventListener("click", ()=>{
     selectButton("todo");
 });
+
 /*------------------End Misk----------------------*/
 
-/*------------------Diana----------------------*/
+document.getElementById("deleteDoneTasks").addEventListener("click", () => {
+  const taskDone = document.querySelectorAll(".todo-list li.completed");
+
+  if (taskDone.length === 0) {
+    showError("No Done tasks to be deleted.")
+    return;
+  }
+
+  deleteMode = 'done';
+  deleteTitle.innerText = "Delete Done Tasks";
+  deleteMessage.innerText = "Are you sure you want to delete all done tasks?";
+  toggleClass("delete-opacity", "delete-opacity");
+  toggleClass("delete-overlay", "delete-overlay");
+
+});
+
+
+
+
+
 const saveTasks = () => {
 
   let tasks = [];
@@ -253,3 +285,6 @@ const loadTasks = () => {
 
   tasks.forEach(createTaskElement);
 }*/
+
+
+/*--------------------------------End-Diana----------------------------------------*/
