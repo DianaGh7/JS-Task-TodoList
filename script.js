@@ -25,7 +25,7 @@ const validateInput = (text, errorContainer) => {
 };
 
 
-const taskinput = document.getElementById('todoInput');
+const taskInput = document.getElementById('todoInput');
 const errorMessage = document.getElementById('errorMessage');
 const taskForm = document.getElementById('taskForm');
 const deleteTitle = document.getElementById("delete-title");
@@ -48,7 +48,7 @@ const hideError = () => {
 
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const text = taskinput.value.trim();
+  const text = taskInput.value.trim();
 
   if (!validateInput(text, errorMessage)) return;
 
@@ -76,7 +76,8 @@ taskForm.addEventListener('submit', (e) => {
 
     toDoList.appendChild(li);
     saveTasks();
-    taskinput.value = '';
+    disableDeleteButtons();
+    taskInput.value = '';
 
 });
 
@@ -111,6 +112,7 @@ toDoList.addEventListener("click", (e) => {
     icon.classList.toggle("fa-check-square");
     li.classList.toggle("completed");
     saveTasks();
+    disableDeleteButtons();
 
     return;
     }
@@ -200,6 +202,7 @@ document.getElementById("confirm").addEventListener("click", () => {
   deleteMode = 'single';
   document.getElementById("confirm").removeAttribute("data-target-id");
   saveTasks();
+  disableDeleteButtons();
 
   toggleClass("delete-opacity", "delete-opacity");
   toggleClass("delete-overlay", "delete-overlay");
@@ -317,6 +320,22 @@ const loadTasks = () => {
 
   tasks.forEach(createTaskElement);
 }*/
+
+
+// Change the deletion buttons into disable 
+
+const disableDeleteButtons = () => {
+  const allTasks = document.querySelectorAll(".todo-list li");
+  const doneTasks = document.querySelectorAll(".todo-list li.completed");
+
+  const deleteAllBtn = document.getElementById("deleteAllTasks");
+  const deleteDoneBtn = document.getElementById("deleteDoneTasks");
+
+  deleteAllBtn.disabled = allTasks.length === 0;
+  deleteDoneBtn.disabled = doneTasks.length === 0;
+};
+
+
 
 
 /*--------------------------------End-Diana----------------------------------------*/
