@@ -53,10 +53,11 @@ taskForm.addEventListener('submit', (e) => {
   if (!validateInput(text, errorMessage)) return;
 
     hideError();
-   
+    // It starts from zero every time with this code
     let todoCounter = 0;
     const li = document.createElement('li');
     li.id = `todo-${todoCounter++}`;
+
     li.innerHTML = `
         <span class="inner-todo">${text}</span>
         <div class="icons">
@@ -294,7 +295,7 @@ document.getElementById("deleteAllTasks").addEventListener("click", () => {
 });
 
 
-
+//------Local Storage-------------------
 const saveTasks = () => {
 
   let tasks = [];
@@ -314,12 +315,33 @@ const saveTasks = () => {
 
 };
 
-/*
+
 const loadTasks = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-  tasks.forEach(createTaskElement);
-}*/
+  tasks.forEach(task => {
+    const li = document.createElement('li');
+    li.id = task.id;
+    li.classList.toggle('completed', task.completed);
+    li.style.display = 'flex';
+
+    const checkIcon = task.completed
+      ? '<i class="fa-regular fa-check-square"></i>'
+      : '<i class="fa-regular fa-square"></i>';
+
+    li.innerHTML = `
+      <span class="inner-todo">${task.text}</span>
+      <div class="icons">
+        <button class="check">${checkIcon}</button>
+        <button class="edit"><i class="fa-solid fa-pen"></i></button>
+        <button class="delete"><i class="fa-solid fa-trash"></i></button>
+      </div>
+    `;
+
+    document.querySelector('.todo-list').appendChild(li);
+  });
+};
+
 
 
 // Change the deletion buttons into disable 
@@ -337,6 +359,7 @@ const disableDeleteButtons = () => {
 
 // Call the disable buttons fun from the loading of the page
 window.addEventListener("DOMContentLoaded", () => {
+  loadTasks();
   disableDeleteButtons();
 });
 
