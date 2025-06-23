@@ -192,6 +192,10 @@ button.active-button {
         padding: 8px;
     }
 
+    button:hover{
+        cursor: pointer;
+    }
+
 }
 
 .edit-hidden {

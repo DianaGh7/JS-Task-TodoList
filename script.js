@@ -1,4 +1,5 @@
 ////////////////////////sara////////////////////////////
+let todoCounter = parseInt(localStorage.getItem('todoCounter')) || 0;
 
 const validateInput = (text, errorContainer) => {
   if (!text) {
@@ -53,10 +54,10 @@ taskForm.addEventListener('submit', (e) => {
   if (!validateInput(text, errorMessage)) return;
 
     hideError();
-    // It starts from zero every time with this code
-    let todoCounter = 0;
+
     const li = document.createElement('li');
     li.id = `todo-${todoCounter++}`;
+    localStorage.setItem('todoCounter', todoCounter);
 
     li.innerHTML = `
         <span class="inner-todo">${text}</span>
@@ -197,6 +198,8 @@ document.getElementById("confirm").addEventListener("click", () => {
 
   if (deleteMode === 'all') {
     document.querySelectorAll(".todo-list li").forEach(task => task.remove());
+    localStorage.setItem('todoCounter', 0);
+    todoCounter = 0;
   }
 
   // To Reset t single mode
@@ -340,6 +343,12 @@ const loadTasks = () => {
 
     document.querySelector('.todo-list').appendChild(li);
   });
+
+  if (tasks.length > 0) {
+    const lastId = Math.max(...tasks.map(task => parseInt(task.id.split('-')[1])));
+    todoCounter = lastId + 1;
+    localStorage.setItem('todoCounter', todoCounter);
+  }
 };
 
 
