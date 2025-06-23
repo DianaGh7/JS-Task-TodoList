@@ -151,6 +151,7 @@ toDoList.addEventListener("click", (e) => {
   }
 });
 
+//Edit popup logic
 document.getElementById("save").addEventListener("click", () => {
   const editInput = document.getElementById("input-edition");
   const editError = document.getElementById("errorMessage-edition");
@@ -184,6 +185,7 @@ document.getElementById("delete-cancel").addEventListener("click", () => {
 });
 
 
+//Delete popup logic
 document.getElementById("confirm").addEventListener("click", () => {
   if (deleteMode === 'single') {
   let id = document.getElementById("confirm").dataset.targetId;
@@ -202,7 +204,7 @@ document.getElementById("confirm").addEventListener("click", () => {
     todoCounter = 0;
   }
 
-  // To Reset t single mode
+  // To Reset the single mode
   deleteMode = 'single';
   document.getElementById("confirm").removeAttribute("data-target-id");
   saveTasks();
@@ -217,6 +219,7 @@ document.getElementById("confirm").addEventListener("click", () => {
 
 /*--------------------------------Diana----------------------------------------*/
 
+//styling of the selection buttons 
 const selectButton = (id)=>{
     document.querySelectorAll("#clssification-btns button").forEach((btn) => {
     btn.classList.remove("active-button");
@@ -225,7 +228,7 @@ const selectButton = (id)=>{
   document.getElementById(id).classList.add("active-button");
 };
 
-
+//filtering buttons into All / Done / Todo
 const displayAll = () => {
   document.querySelectorAll(".todo-list li").forEach(item => { 
     item.style.display = "flex";
@@ -248,8 +251,6 @@ const displayTodo = () => {
 };
 
 
-
-
  //لما أضغط عالبوتن يستدعي selectButton
 document.getElementById("all").addEventListener("click", ()=>{
     selectButton("all");
@@ -265,6 +266,7 @@ document.getElementById("todo").addEventListener("click", ()=>{
 
 /*------------------End Misk----------------------*/
 
+// Delete buttons 
 document.getElementById("deleteDoneTasks").addEventListener("click", () => {
   const taskDone = document.querySelectorAll(".todo-list li.completed");
 
@@ -298,7 +300,7 @@ document.getElementById("deleteAllTasks").addEventListener("click", () => {
 });
 
 
-//------Local Storage-------------------
+//-------------------Local Storage-------------------
 const saveTasks = () => {
 
   let tasks = [];
@@ -367,6 +369,7 @@ const disableDeleteButtons = () => {
 };
 
 // Call the disable buttons fun from the loading of the page
+// Runs at the start when the page loads
 window.addEventListener("DOMContentLoaded", () => {
   loadTasks();
   disableDeleteButtons();
