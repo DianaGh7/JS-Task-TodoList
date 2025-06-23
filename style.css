@@ -361,5 +361,8 @@ button.active-button {
 
 /*----------------------------End Misk-----------------*/
 
-
-
+button:disabled {
+    background-color: rgb(244, 141, 144) !important;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
