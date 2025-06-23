@@ -256,7 +256,21 @@ document.getElementById("deleteDoneTasks").addEventListener("click", () => {
 
 });
 
+document.getElementById("deleteAllTasks").addEventListener("click", () => {
+  const taskAll = document.querySelectorAll(".todo-list li");
 
+  if (taskAll.length === 0) {
+    showError("No tasks to be deleted.")
+    return;
+  }
+
+  deleteMode = 'all';
+  deleteTitle.innerText = "Delete All Tasks";
+  deleteMessage.innerText = "Are you sure you want to delete all tasks?";
+  toggleClass("delete-opacity", "delete-opacity");
+  toggleClass("delete-overlay", "delete-overlay");
+
+});
 
 
 
