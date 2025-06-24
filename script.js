@@ -40,13 +40,13 @@ const showError = (msg) => {
     errorMessage.style.display = 'block';
 };
 
-// when the user fix the error the error message should disappear
+// when the user fix the error, the error message should disappear
 const hideError = () => {
     errorMessage.innerText = '';
     errorMessage.style.display = 'none';
 };
 
-
+// Adding a new task
 taskForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = taskInput.value.trim();
